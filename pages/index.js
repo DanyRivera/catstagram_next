@@ -25,7 +25,13 @@ export default function Home({ breeds, breedsStories, setBreedId, breedId }) {
         {breed !== undefined ? (
           <div className="md:grid md:grid-cols-3 ">
             <div className="text-center mt-5 px-2 md:px-0">
-              <Image className="rounded-md" width={400} height={250} src={breed.image.url} alt={`${breed.name} Image`} />
+              <Image
+                className="rounded-md"
+                width={400}
+                height={250}
+                src={`https://cdn2.thecatapi.com/images/${breed.reference_image_id}.jpg`}
+                alt={`${breed.name} Image`}
+              />
             </div>
             <div className="px-4 md:col-start-2 md:col-end-4">
               <p className="my-3 text-2xl font-bold md:text-5xl">{breed.name}</p>
@@ -38,9 +44,9 @@ export default function Home({ breeds, breedsStories, setBreedId, breedId }) {
 
       </section>
 
-      <Feed 
+      {/* <Feed
         breeds={breeds}
-      />
+      /> */}
 
     </div>
   )
