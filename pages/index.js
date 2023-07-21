@@ -44,9 +44,9 @@ export default function Home({ breeds, breedsStories, setBreedId, breedId }) {
 
       </section>
 
-      {/* <Feed
+      <Feed
         breeds={breeds}
-      /> */}
+      /> 
 
     </div>
   )
